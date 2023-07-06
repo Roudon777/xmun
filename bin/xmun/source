@@ -1,0 +1,33 @@
+let a = List(1000);
+let L= a.length;
+let j=0;
+let z=1;
+loop(j ; j < L; j = j + 1){
+	a.set(2*z-j*j);
+	z=z+3;
+}
+let clk = clock();
+a.bubbleSort();
+let i = 0;
+output "bubble sort";
+output "bubble sort time cost";
+output clock()-clk;
+loop(i ; i < L; i = i + 1){
+	
+	output a.get(i);
+}
+
+
+
+let a = List(3);
+a.set(9);
+a.set(12);
+a.set(11);
+a.bubbleSort();
+
+let i = 0;
+let L= a.length;
+output "quick sort";
+loop(i ; i < L; i = i + 1){
+	output a.get(i);
+}
